@@ -47,6 +47,8 @@ Accurate detection and segmentation of brain tumors from medical imaging data is
 6. **Visualization and Evaluation**: This module provides visual representations of the tumor detection and segmentation results, as well as performance metrics for evaluating the accuracy and reliability of the proposed approach.
 
 ## References
-1. [Reference 1] - Citation for relevant research paper or publication.
-2. [Reference 2] - Citation for relevant research paper or publication.
-3. [Reference 3] - Citation for relevant research paper or publication.
+1. [Gamma Distribution Based Fuzzy Feature Extraction for Brain Tumor Detection](https://ieeexplore.ieee.org/document/8424993) - Haidine, A., & Lebbah, M. (2018). Gamma distribution based fuzzy feature extraction for brain tumor detection. Journal of Ambient Intelligence and Humanized Computing, 9(6), 1907-1920.
+
+2. [Brain Tumor Detection Based on Segmentation Using MATLAB](https://www.mdpi.com/2076-3417/10/3/777) - Mohsen, H., El-Dahshan, E. S. A., El-Horbaty, E. S. M., & Salem, A. B. M. (2020). Brain tumor detection based on segmentation using MATLAB. Applied Sciences, 10(3), 777.
+
+3. [Gamma Distribution for Brain Tumor Detection](https://ieeexplore.ieee.org/document/7847995) - Bhattacharjee, S., & Roy, A. (2016, December). Gamma distribution for brain tumor detection. In 2016 International Conference on Computer, Electrical & Communication Engineering (ICCECE) (pp. 1-5). IEEE.
