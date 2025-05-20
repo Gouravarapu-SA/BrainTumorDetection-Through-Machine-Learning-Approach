@@ -1,54 +1,128 @@
-# Brain Tumor Detection and Data Sample Imbalance Analysis using Gamma Distribution and Machine Learning
+# 🧠 Brain Tumor Detection with Gamma-Based Machine Learning
 
-## Motivation
-Accurate detection and segmentation of brain tumors from medical imaging data is a crucial task in the field of medical imaging and computer-aided diagnosis. However, existing systems often face limitations in handling noise, data imbalances, and edge matching challenges, which can lead to inaccurate tumor detection and segmentation.
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![ML](https://img.shields.io/badge/Deep_Learning-Keras-orange.svg)
+![UI](https://img.shields.io/badge/Interface-Tkinter-lightgrey.svg)
 
-## Objectives
-1. Develop a machine learning approach for efficient brain tumor detection and segmentation.
-2. Utilize gamma distribution to analyze and remove noise from segmented tumor regions.
-3. Address data imbalances due to improper edge matching in abnormal regions.
-4. Improve the accuracy and reliability of brain tumor detection and segmentation.
+> A deep learning-based application that detects brain tumors in MRI images using CNN and gamma-based edge analysis. Includes a GUI built with Tkinter for model training, testing, and visualization.
 
-## Existing System Limitations
-1. Inaccurate tumor detection and segmentation due to the presence of noise and data imbalances.
-2. Challenges in handling improper edge matching in abnormal regions.
-3. Limited ability to automatically detect and segment tumors with varying characteristics.
+---
 
-## Proposed System Advantages
-1. Utilizes machine learning techniques for accurate tumor detection and segmentation.
-2. Incorporates gamma distribution to analyze and remove noise from segmented tumor regions.
-3. Addresses data imbalances by matching edge coordinates and sensitivity and selectivity parameters.
-4. Provides an automated and efficient approach to brain tumor detection and analysis.
+## 📊 Overview
 
-## System Requirements
-1. Medical imaging data (e.g., MRI, CT scans) of brain tumor patients.
-2. Computational resources for running machine learning algorithms and image processing techniques.
-3. Software libraries and tools for data preprocessing, feature extraction, and model training and evaluation.
+This project focuses on classifying brain MRI images into **tumor** or **no tumor** categories using a Convolutional Neural Network (CNN). It also applies **gamma edge analysis** to highlight the tumor region. Key components include:
 
-## System Architecture
-1. **Data Preprocessing Module**: Handles data cleaning, normalization, and augmentation.
-2. **Feature Extraction Module**: Extracts relevant features from the medical imaging data.
-3. **Machine Learning Module**: Trains and evaluates machine learning models for tumor detection and segmentation.
-4. **Gamma Distribution Module**: Analyzes segmented tumor regions using gamma distribution to detect and remove noise.
-5. **Data Imbalance Module**: Addresses data imbalances by matching edge coordinates and adjusting sensitivity and selectivity parameters.
-6. **Visualization and Evaluation Module**: Provides visual representations and performance metrics for tumor detection and segmentation results.
+- 🧠 CNN model for binary image classification
+- 🎯 Gamma-based segmentation for edge highlighting
+- 📈 Accuracy visualization via training graphs
+- 🖥️ Interactive GUI for dataset upload, prediction, and graphing
 
-## Modules
-1. **Data Preprocessing**: This module handles data cleaning, normalization, and augmentation tasks to prepare the medical imaging data for further processing.
+---
 
-2. **Feature Extraction**: This module extracts relevant features from the preprocessed medical imaging data, which can be used for training and evaluating machine learning models.
+## 📁 Project Structure
 
-3. **Machine Learning**: This module is responsible for training and evaluating machine learning models for brain tumor detection and segmentation. It utilizes the extracted features and labeled data to develop accurate models.
+```bash
+brain-tumor-detection/
+├── Model/
+│   ├── model.json                # Saved model architecture
+│   ├── model_weights.h5          # Trained CNN weights
+│   ├── history.pckl              # Accuracy history for plotting
+│   ├── myimg_data.txt.npy        # Numpy dataset file
+│   ├── myimg_label.txt.npy       # Numpy label file
+├── testImages/                   # Sample test MRI images
+├── test1.png                     # Resized original image (used in prediction)
+├── myimg.png                     # Model's predicted tumor mask
+├── 1.png, 2.png, 97.png          # Sample tumor image examples
+├── New Text Document.txt         # Main Python script (GUI + Model)
+└── README.md                     # Project documentation
+```
 
-4. **Gamma Distribution**: This module analyzes the segmented tumor regions using gamma distribution to detect and remove noise. It examines the variance of each pixel and removes noise if the variance exceeds a predefined threshold.
+---
 
-5. **Data Imbalance**: This module addresses data imbalances due to improper edge matching in abnormal regions. It matches the edge coordinates and adjusts the sensitivity and selectivity parameters using the machine learning algorithm.
+##🚀 Getting Started
+1.Clone the repository
+```bash
+git clone https://github.com/your-username/brain-tumor-detection.git
+cd brain-tumor-detection
+```
+2.Install the required packages
+```bash
+pip install -r requirements.txt
+```
+3.Run the application
+```bash
+python "New Text Document.txt"
+```
+The GUI will launch, allowing you to upload images, build the model, and test predictions interactively.
 
-6. **Visualization and Evaluation**: This module provides visual representations of the tumor detection and segmentation results, as well as performance metrics for evaluating the accuracy and reliability of the proposed approach.
+---
 
-## References
-1. [Gamma Distribution Based Fuzzy Feature Extraction for Brain Tumor Detection](https://ieeexplore.ieee.org/document/8424993) - Haidine, A., & Lebbah, M. (2018). Gamma distribution based fuzzy feature extraction for brain tumor detection. Journal of Ambient Intelligence and Humanized Computing, 9(6), 1907-1920.
+## 📸 Visual Previews
 
-2. [Brain Tumor Detection Based on Segmentation Using MATLAB](https://www.mdpi.com/2076-3417/10/3/777) - Mohsen, H., El-Dahshan, E. S. A., El-Horbaty, E. S. M., & Salem, A. B. M. (2020). Brain tumor detection based on segmentation using MATLAB. Applied Sciences, 10(3), 777.
+<table>
+  <tr>
+    <td><img src="1.png" alt="Sample Tumor Image 1" width="250"/></td>
+    <td><img src="2.png" alt="Sample Tumor Image 2" width="250"/></td>
+    <td><img src="97.png" alt="Sample Tumor Image 3" width="250"/></td>
+  </tr>
+  <tr>
+    <td align="center">Tumor Image 1</td>
+    <td align="center">Tumor Image 2</td>
+    <td align="center">Tumor Image 3</td>
+  </tr>
+</table>
 
-3. [Gamma Distribution for Brain Tumor Detection](https://ieeexplore.ieee.org/document/7847995) - Bhattacharjee, S., & Roy, A. (2016, December). Gamma distribution for brain tumor detection. In 2016 International Conference on Computer, Electrical & Communication Engineering (ICCECE) (pp. 1-5). IEEE.
+> Images processed by the model, showing regions affected by tumors through gamma-based edge analysis.
+
+---
+
+## 🧪 Model Evaluation
+
+- ✅ Dice Coefficient Accuracy Measurement  
+- 🔍 Visual Analysis of Predicted Masks  
+- 📈 Graph of Training Accuracy per Epoch  
+- 🎯 GUI outputs accuracy and prediction status live
+
+---
+
+## 🧹 Data Flow & Preprocessing
+
+- 📂 Upload MRI dataset via Tkinter file dialog  
+- 🌀 Resize & normalize input images  
+- 🧠 CNN Model built or loaded from saved files  
+- 🔄 Predict tumor presence on test images  
+- 🎨 Gamma Edge Analysis for visualization
+
+---
+
+## 🧠 Architecture Highlights
+
+- Multi-layer CNN with:
+  - `Conv2D ➡ MaxPooling ➡ Flatten ➡ Dense`
+- Optional **U-Net** variant for segmentation
+- Activation functions: **ReLU** + **Softmax/Sigmoid**
+- Optimizer: **Adam**
+- Loss Function: **Categorical Crossentropy**
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.  
+You are free to use, modify, and distribute it with attribution.
+
+---
+
+## 🙌 Acknowledgments
+
+Thanks to the **open-source Python** and **Keras** communities, and all contributors in the **medical imaging research** space.
+
+---
+
+## 📫 Contact
+
+For questions, suggestions, or collaborations:  
+📧 **akhilsai96@gmail.com**
+
+
