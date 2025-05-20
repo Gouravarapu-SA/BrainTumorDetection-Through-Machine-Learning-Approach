@@ -62,7 +62,7 @@ The GUI will launch, allowing you to upload images, build the model, and test pr
 
 <table>
   <tr>
-    <td><img src="1.png" alt="Sample Tumor Image 1" width="250"/></td>
+    <td><img src="testimages\1.png" alt="Sample Tumor Image 1" width="250"/></td>
     <td><img src="2.png" alt="Sample Tumor Image 2" width="250"/></td>
     <td><img src="97.png" alt="Sample Tumor Image 3" width="250"/></td>
   </tr>
